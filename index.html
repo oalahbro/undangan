@@ -336,7 +336,8 @@
           </h1>
 
           <p class="pb-3 px-3">
-            Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
+            Tanpa mengurangi rasa hormat. Kami mengundang
+            <b class="p1">Bapak/Ibu/Saudara/i</b>
             serta kerabat sekalian untuk menghadiri acara pernikahan kami:
           </p>
 
@@ -1043,9 +1044,9 @@
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak
-            / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya
-            kami ucapkan terimakasih.
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila,
+            <b class="p1"> / Ibu / Saudara / i</b>. berkenan hadir untuk
+            memberikan do'a restunya kami ucapkan terimakasih.
           </p>
 
           <h1 class="font-esthetic" data-aos="fade-up" data-aos-duration="2000">
@@ -1207,5 +1208,15 @@
       integrity="sha256-XG5M9shcLLpu8ct5bVbu6lLVzLpfZChl+csxdyLVP18="
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tamu = document.querySelectorAll(".p1");
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var c = url.searchParams.get("c");
+      tamu.forEach((element) => {
+        element.textContent = c;
+      });
+      tamu[0];
+    </script>
   </body>
 </html>
